@@ -2,6 +2,11 @@
 <!-- AngularJS form data insert using ng-submit-->
 <?php include("inc/header.php"); ?>
 <div class="container" style="width: 500px;margin-top: 50px">
+
+<a href="index.php" class="btn btn-primary" role="button">Insert using ng-click</a>
+<a href="formsubmit.php" class="btn btn-primary" role="button">Insert using ng-submit</a>
+<a href="display.php" class="btn btn-primary" role="button">List</a>
+
  <div ng-app="myApp" ng-controller="userController">
   <h3>Insert data into database with AngularJS</h3>
   <form name="myform" ng-submit="insertData()">
