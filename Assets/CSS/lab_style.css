@@ -1,0 +1,17 @@
+.collapse-panel-heading-style{
+	padding: 20px 15px !important;
+	background-color: #141486 !important;
+	color: white !important;
+	font-size: 20px
+}
+.collapse-panel-heading-style a{
+	text-decoration: none;
+}
+
+.panel-border-color{
+	border-color: #141486;
+}
+
+.panel-title-fontsize{
+	font-size:18px
+}
