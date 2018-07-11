@@ -1,5 +1,5 @@
 
-<!-- AngularJS form data insert suing ng-click -->
+<!-- AngularJS form data insert using ng-click -->
 <?php include("inc/header.php"); ?>
 <div class="container" style="width: 500px;margin-top: 50px">
  <div ng-app="myApp" ng-controller="userController">
