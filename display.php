@@ -29,7 +29,7 @@
         <td>{{ x.email }}</td>
         <td>
           <button class="btn btn-info btn-xs" ng-click="editData(x.user_id, x.name, x.email)">Edit</button>
-          <button class="btn btn-danger btn-xs" ng-click="deleteData(x.user_id, x.name, x.email)">Delete</button>
+          <button class="btn btn-danger btn-xs" ng-click="deleteData(x.user_id)">Delete</button>
         </td>
       </tr>
     </tbody>
@@ -116,5 +116,25 @@
           });
         }
       }
+
+
+       $scope.deleteData = function(id){
+        if(confirm("Are you sure? you want to delete this data?"))
+        {
+          $http.post(
+          "delete.php",
+          {"user_id":id}
+          ).success(function(data){
+            alert(data);
+            $http.get("select.php").then(function (response) {
+              $scope.myData = response.data;
+            });
+          });
+        }
+        else
+        {
+          return false;
+        }
+       }
     });
   </script>
