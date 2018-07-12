@@ -15,7 +15,7 @@
     <label for="email">Email:</label>
     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ng-model="emailid">
     <br>
-     <input type="submit" class="btn btn-success" value="Submit" ng-click="insertData()"> 
+     <input type="submit" class="btn btn-success" value={{btnName}} ng-click="insertData()"> 
 </div>
 </div>
 
@@ -23,6 +23,7 @@
   var app = angular.module("myApp",[]);
 
   app.controller("userController",function($scope,$http){
+    $scope.btnName = "ADD";
     $scope.insertData = function(){
       $http.post(
         "insert.php",
